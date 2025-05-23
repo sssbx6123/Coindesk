@@ -1,0 +1,31 @@
+### 取得所有幣別
+GET http://localhost:8080/api/currency
+
+### 依代碼查詢幣別
+GET http://localhost:8080/api/currency/USD
+
+### 新增幣別
+POST http://localhost:8080/api/currency
+Content-Type: application/json
+
+{
+  "code": "JPY",
+  "name": "日圓"
+}
+
+### 更新幣別
+PUT http://localhost:8080/api/currency/TWD
+Content-Type: application/json
+
+{
+  "name": "新台幣(更新)"
+}
+
+### 刪除幣別
+DELETE http://localhost:8080/api/currency/JPY
+
+### 取得 coindesk 原始資料
+GET http://localhost:8080/api/coindesk/raw
+
+### 取得 coindesk 轉換後資料
+GET http://localhost:8080/api/coindesk/transformed
